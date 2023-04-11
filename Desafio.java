@@ -19,11 +19,9 @@ public class Desafio {
         banda.add("Bon jovi");
         banda.add("Coldplay");
         banda.add("Nazareth");
-        banda.add("");
-        banda.add("Nazareth");
-        for(String b : banda){
-             System.out.println(b);
-        }
+        banda.add("The Beatles");
+        
+        
         
         
         System.out.println("-------------------------------------------------");
@@ -31,7 +29,8 @@ public class Desafio {
         System.out.println("Escolha uma opção:");
         System.out.println("1 - Mostrar Lista");
         System.out.println("2 - Adiconar uma Banda!");
-        System.out.println("3 - Excluir todos os nomes!");
+        System.out.println("3 - Remover uma banda");
+        System.out.println("4 - Excluir todos os nomes!");
         System.out.println("-------------------------------------------------");
          int opcao = Integer.parseInt(teclado.nextLine());
         
@@ -50,17 +49,56 @@ public class Desafio {
                 String nomeBanda;
                 nomeBanda = teclado.nextLine();
                 banda.add(nomeBanda);
-                for(String b : banda){
-                        
-             System.out.println(b);
-        }
-                break;
+                
+                System.out.println("Banda Adicionada com Sucesso!");
+                System.out.println("-------------------------------------------------");
+                System.out.println("1 - Deseja visualizar a Lista novamente");
+                System.out.println("2 - Sair");
+                
+                int mostra = Integer.parseInt(teclado.nextLine());
+                    switch(mostra){
+                        case 1:
+                            for(String b : banda){      
+                            System.out.println(b); 
+                            }break;
+                        case 2:
+                            System.out.println("Você escolheu Sair!"); 
+                            break;  
+                    }break;
+                      
+                  
             case 3:
+                System.out.println("Você Escolheu Remover uma banda");
+                System.out.println("-------------------------------------------------");
+                System.out.println("Digite o número da banda que deseja remover começando da posição 0:");
+                int indBanda;
+                indBanda = teclado.nextInt();
+                banda.remove(indBanda);
+                System.out.println("Banda Removida com Sucesso!");
+                System.out.println("-------------------------------------------------");
+                System.out.println("-------------------------------------------------");
+                System.out.println("Essa é a Lista Agora!");
+                for(String b : banda){      
+                            System.out.println(b); 
+                            }break;
+                                  
+            case 4:
                 System.out.println("Você Escolheu Excluir todos os nomes");
                 banda.clear();
-                System.out.println(banda);
-                break;
-                
+                System.out.println("Lista Deletada com Sucesso!");
+                    System.out.println("-------------------------------------------------");
+                    System.out.println("1 - Deseja visualizar a Lista novamente");
+                    System.out.println("2 - Sair");
+                    
+                    int listadeletada = Integer.parseInt(teclado.nextLine()); 
+                    switch(listadeletada){
+                        case 1:
+                                System.out.println("Sem Lista Disponivel!");
+                            break;
+                        case 2:
+                            System.out.println("Você escolheu Sair!"); 
+                            break;  
+                    }break;  
         }
     }
 }
