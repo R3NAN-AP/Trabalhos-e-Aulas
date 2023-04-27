@@ -1,6 +1,5 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
 
 package com.mycompany.exercicio4;
@@ -12,6 +11,13 @@ package com.mycompany.exercicio4;
 public class Exercicio4 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Peixe tubarao = new Peixe("Tubarão", "Barbatanas e cauda", 300, 1.5f);
+
+    tubarao.dados ();
+
+    Mamifero urso = new Mamifero("Urso-do-Canadá", "Castanho", "Mel", 180, 0.5f, 4);
+
+    urso.dados ();
+
     }
 }
